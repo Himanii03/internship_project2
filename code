@@ -1,0 +1,22 @@
+#Word counter program
+print('Excited for counting the number of words....')
+print("Let's start")
+
+#Taking input from user
+text=input('Enter the sentence or paragraph : ').strip()  #.strip() is used to remove leading and trailing whitespace (spaces, newlines, and tabs) from a string
+#Function to count number of words
+
+def count_words(text):
+    words=text.split()  #.split() is used to split text into words
+    #Finding word count using len()
+    return len(words)
+
+#Handling error if input is empty
+if not text:
+    print('ERROR: You entered an empty string')
+
+else:
+    word_count=count_words(text)
+    print('WORD COUNT : ',word_count)
+
+
